@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-  <h2>  <%= student.name %></h2>
-  <p><%= student.email %></p>
+    <form action="/students" method="post">
+<input type="text" name="name" placeholder="Add name">
+<input type="email" name="email" placeholder="Add Email">
+<input type="submit" value="Add Students">
+
+    </form>
     
 </body>
 </html>
