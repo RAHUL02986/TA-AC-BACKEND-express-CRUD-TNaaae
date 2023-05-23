@@ -7,7 +7,7 @@ var userSchema = new Schema({
   email:String,
   age: Number,
   bio: String,
-});
+},{timestamps:true});
 
 var User = mongoose.model('User', userSchema);
 

@@ -3,6 +3,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var path = require('path');
 var userRouter = require('./routers/users');
+var indexRouter = require('./routers/index')
 //conneting mongo
 mongoose
   .connect('mongodb://127.0.0.1:27017/user-diary-2', {
@@ -27,7 +28,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //routing handle
-app.use('/', userRouter);
+app.use('/users', userRouter);
+app.use('/', indexRouter)
 //listening
 app.listen(4000, () => {
   console.log('app listen on port 4k');

@@ -15,8 +15,12 @@ router.post('/users', (req, res) => {
     });
 });
 
-router.get('/',(req,res)=>{
-    res.render('listUsers')
-})
+router.get('/', (req, res) => {
+  res.render('users');
+});
+router.get('/new', (req, res) => {
+
+  res.render('listUsers');
+});
 
 module.exports = router;
